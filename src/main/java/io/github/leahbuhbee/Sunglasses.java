@@ -8,6 +8,9 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
@@ -20,6 +23,7 @@ public class Sunglasses implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		Registry.register(Registries.ITEM, Identifier.of(Sunglasses.ID, "sunglasses"), new Item(new Item.Settings()));
         LOGGER.info("[Sunglasses] Barks at your sun");
 	}
 }
