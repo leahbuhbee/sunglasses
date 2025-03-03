@@ -1,25 +1,35 @@
 {
-	"parent": "minecraft:item/generated",
+	"texture_size": [32, 32],
 	"textures": {
-		"layer0": "sunglasses:item/sunglasses"
+		"0": "sunglasses:item/sunglasses",
+		"particle": "sunglasses:item/sunglasses"
 	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"east": {"uv": [0, 8, 8, 16], "texture": "#0"},
+				"west": {"uv": [8, 8, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [16, 0, 0],
+			"to": [0, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 0]},
+			"faces": {
+				"north": {"uv": [8, 0, 0, 8], "texture": "#0"},
+				"east": {"uv": [0, 8, 8, 16], "texture": "#0"},
+				"west": {"uv": [8, 8, 16, 16], "texture": "#0"}
+			}
+		}
+	],
 	"display": {
-		"head": {
-			"rotation": [
-				180,
-				0,
-				0
-			],
-			"translation": [
-				0,
-				9.5,
-				0
-			],
-			"scale": [
-				1.6,
-				1.6,
-				1.6
-			]
+		"gui": {
+			"rotation": [-170, -30, -180],
+			"translation": [-0.5, 0.5, 0],
+			"scale": [0.7, 0.7, 0.7]
 		}
 	}
 }
