@@ -27,20 +27,20 @@ dependencies {
 
 processResources {
 	final Map<String, String> meta = [
-			version       : version,
-			modId         : modId,
-			modName       : modName,
-			modDescription: modDescription,
-			homepage      : "https://modrinth.com/mod/${slug}",
-			issues        : "https://github.com/${user}/${slug}/issues",
-			sources       : "https://github.com/${user}/${slug}",
-			license       : license,
-			authors       : authors.split(", ").join("\",\n    \""),
-			contributors  : contributors.split(", ").join("\",\n    \""),
-			members       : "${authors}. Contributions by ${contributors}",
-			mc            : compatibleVersions.split(", ")[0],
-			fl            : libs.versions.fl.get(),
-			fapi          : libs.versions.fapi.get()
+		version       : version,
+		modId         : modId,
+		modName       : modName,
+		modDescription: modDescription,
+		homepage      : "https://modrinth.com/mod/${slug}",
+		issues        : "https://github.com/${user}/${slug}/issues",
+		sources       : "https://github.com/${user}/${slug}",
+		license       : license,
+		authors       : authors.split(", ").join("\",\n    \""),
+		contributors  : contributors.split(", ").join("\",\n    \""),
+		members       : "${authors}. Contributions by ${contributors}",
+		mc            : compatibleVersions.split(", ")[0],
+		fl            : libs.versions.fl.get(),
+		fapi          : libs.versions.fapi.get()
 	]
 	inputs.properties(meta)
 	filesMatching("*.mod.json") { expand(meta) }
@@ -49,13 +49,13 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
 	withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
@@ -65,14 +65,6 @@ jar {
 }
 
 publishing {
-	repositories {
-		maven {
-			name "SleepingTown"
-			url "https://repo-api.sleeping.town/"
-			credentials(PasswordCredentials)
-		}
-	}
-
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
