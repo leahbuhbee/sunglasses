@@ -1,5 +1,6 @@
 package io.github.leahbuhbee;
 
+import io.github.leahbuhbee.item.SunglassesItem;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -23,7 +24,7 @@ public class Sunglasses implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Registry.register(Registries.ITEM, Identifier.of(Sunglasses.ID, "sunglasses"), new Item(new Item.Settings()));
+		Registry.register(Registries.ITEM, Identifier.of(Sunglasses.ID, "sunglasses"), new SunglassesItem(new Item.Settings()));
         LOGGER.info("[Sunglasses] Barks at your sun");
 	}
 }

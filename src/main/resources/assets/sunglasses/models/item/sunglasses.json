@@ -2,5 +2,24 @@
 	"parent": "minecraft:item/generated",
 	"textures": {
 		"layer0": "sunglasses:item/sunglasses"
+	},
+	"display": {
+		"head": {
+			"rotation": [
+				180,
+				0,
+				0
+			],
+			"translation": [
+				0,
+				9.5,
+				0
+			],
+			"scale": [
+				1.6,
+				1.6,
+				1.6
+			]
+		}
 	}
 }
