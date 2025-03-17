@@ -1,4 +1,4 @@
-package io.github.leahbuhbee.item;
+package io.github.leahbuhbee.sunglasses.item;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;

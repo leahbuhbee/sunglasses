@@ -1,30 +1,33 @@
 {
-  "schemaVersion": 1,
-  "id": "${modId}",
-  "version": "${version}",
-  "name": "${modName}",
-  "description": "${modDescription}",
-  "authors": [
-    "${authors}"
-  ],
-  "contributors": [
-    "${contributors}"
-  ],
-  "contact": {
-    "homepage": "${homepage}",
-    "issues": "${issues}",
-    "sources": "${sources}"
-  },
-  "license": "${license}",
-  "icon": "assets/${modId}/icon.png",
-  "depends": {
-    "fabricloader": ">=${fl}",
-    "fabric-api": ">=${fapi}",
-    "minecraft": ">=${mc}"
-  },
-  "entrypoints": {
-    "main": [
-		"io.github.leahbuhbee.Sunglasses"
-    ]
-  }
+	"schemaVersion": 1,
+	"id": "${modId}",
+	"version": "${version}",
+	"name": "${modName}",
+	"description": "${modDescription}",
+	"authors": [
+		"${authors}"
+	],
+	"contributors": [
+		"${contributors}"
+	],
+	"contact": {
+		"homepage": "${homepage}",
+		"issues": "${issues}",
+		"sources": "${sources}"
+	},
+	"license": "${license}",
+	"icon": "assets/${modId}/icon.png",
+	"mixins": [
+		"${modId}.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${fl}",
+		"fabric-api": ">=${fapi}",
+		"minecraft": ">=${mc}"
+	},
+	"entrypoints": {
+		"main": [
+			"io.github.leahbuhbee.sunglasses.Sunglasses"
+		]
+	}
 }

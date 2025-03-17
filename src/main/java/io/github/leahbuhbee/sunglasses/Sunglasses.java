@@ -1,6 +1,6 @@
-package io.github.leahbuhbee;
+package io.github.leahbuhbee.sunglasses;
 
-import io.github.leahbuhbee.item.SunglassesItem;
+import io.github.leahbuhbee.sunglasses.item.SunglassesItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -15,12 +15,11 @@ import org.slf4j.LoggerFactory;
 public class Sunglasses implements ModInitializer {
 	public static final String ID = "sunglasses";
 	public static final Logger LOGGER = LoggerFactory.getLogger(ID);
-
+	public static Item SUNGLASSES = Registry.register(Registries.ITEM, Identifier.of(Sunglasses.ID, "sunglasses"), new SunglassesItem(new Item.Settings()));
 
 	@Override
 	public void onInitialize() {
-		Item sunglasses = Registry.register(Registries.ITEM, Identifier.of(Sunglasses.ID, "sunglasses"), new SunglassesItem(new Item.Settings()));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addBefore(Items.ELYTRA, sunglasses));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addBefore(Items.ELYTRA, SUNGLASSES));
 		LOGGER.info("[Sunglasses] Barks at your sun");
 	}
 }
