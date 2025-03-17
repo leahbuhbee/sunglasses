@@ -9,7 +9,7 @@ Adds wearable sunglasses to the game!
 
 Adds craftable sunglasses with this recipe:<br/>
 ![Recipe](https://cdn.modrinth.com/data/P1u9z9xS/images/c5accea9a278c42c399cca756edaf8dd18c02e48.png)
-
+Punching someone while holding sunglasses places them somewhat gently on their head.
 ## Afterword
 
 Made for [BlanketCon '25](https://modfest.net/bc25)!
